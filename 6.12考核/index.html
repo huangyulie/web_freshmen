@@ -117,7 +117,7 @@
             width: 190px;
             height: 401px;
             line-height: 401px;
-            background-color: #F08080;
+            background-color: white;
         }
 
         .content .main_nav {
@@ -258,7 +258,87 @@
                 transform: rotate(-360deg) scale(2);
             }
         }
-        /*  */
+        /* 屈琳博的css */
+        .main_r {
+            right: 465px;
+            width: 280px;
+            height: 400px;
+            position: absolute;
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .a
+        {
+            position: absolute;
+            width: 280px;
+            height: 400px;
+            background-color: rgb(117, 224, 207);
+        }
+        .buttons
+        {
+            margin: 60px 0;
+            color: #fff;
+
+        }
+
+        .li
+        {
+            letter-spacing: 2px;
+            font: 600 17px '';
+            padding: 16px 52px;
+            transition: .1s;
+        }
+
+        .li::after
+        {
+            content: '';
+            position: absolute;
+            left: 20px;
+            margin-top: -22px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+
+        }
+
+        .buttons>li:hover
+        {
+            background-color: #beb5df;
+        }
+
+        .li ul
+        {
+            width: 0;
+            height: 400px;
+            padding:60px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background-color: #59699b;
+            transition: 0.5s;
+        }
+
+        .li ul li
+        {
+            padding: 16px 24px;
+            transition: 1s;
+        }
+
+        .li:hover ul
+        {
+            width: 228px;
+        }
+
+        .li ul li:hover
+        {
+            background-color: #828eb9;
+        }
     </style>
 </head>
 
@@ -336,7 +416,46 @@
                 <div class="main_news3">3</div>
             </div>
             <div class="main_r">
-                (屈琳博)
+                <nav class="a">
+                    <ul class="buttons">
+                        <li class="li">
+                            Management
+                            <ul style="height: 280px;">
+                                <li>Sold baby</li>
+                                <li>Evaluation</li>
+                                <li>Shopkeeper</li>
+                                <li>Management</li>
+                            </ul>
+                        </li>
+                        <li class="li">
+                            Warhouses
+                            <ul style="height: 280px;">
+                                <li>Deliver goods</li>
+                                <li>Stock</li>
+                                <li>Mail</li>
+                                <li>Warhouses</li>
+                            </ul>
+                        </li>
+                        <li class="li">
+                            Release baby
+                            <ul style="height: 280px;">
+                                <li>Posting Details</li>
+                                <li>Shop decoration</li>
+                                <li>Release baby</li>
+                            </ul>
+                        </li>
+            
+                        <li class="li">
+                            Payment
+                            <ul style="height: 280px;">
+                                <li>Loan goods</li>
+                                <li>Evaluation</li>
+                                <li>Shopkeeper</li>
+                                <li>Payment</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="main_nav"></div>
         </div>
