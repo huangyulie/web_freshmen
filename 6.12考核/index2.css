@@ -1,0 +1,69 @@
+
+
+.container_2{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container_2 .sun{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(253, 253, 97, 0.897);
+    border-radius: 50%;
+    box-shadow: 0 0 4px #fff,0 0 5px #fff;
+}
+.earth,
+.moon{
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid solid none none;
+    border-color: silver transparent transparent transparent;
+    border-width: 3px;
+}
+.earth{
+    width: 150px;
+    height: 150px;
+    animation: move6 36.5s linear infinite;
+}
+.moon{
+    top: 1.5px;
+    right: 1.5px;
+    width: 40px;
+    height: 40px;
+    animation: move6 2.7s linear infinite;
+}
+
+@keyframes move6{
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+/* 画地球和月亮 */
+.earth::before,
+.moon::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before{
+    top: 14px;
+    right: 14px; 
+    width: 15px;
+    height: 15px;
+    background-color: dodgerblue;
+}
+
+.moon::before{
+    top: 1px;
+    right: 1px;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
