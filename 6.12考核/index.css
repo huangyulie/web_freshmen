@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    perspective: 1000px;
+    /* 调整视距 */
+    top: calc(40% - 50px);
+    left: calc(50% - 50px);
+    /* 垂直水平居中 */
+}
+/*立方体容器样式*/
+.cube{
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-30deg) rotateY(-80deg); */
+    animation: roddy 10s linear infinite;
+	/*设置动画匀速重复*/
+}
+@keyframes roddy{
+	0%{transform: rotateX(0deg) rotateY(0deg);}
+	100%{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cube div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    /* 设置透明度 */
+    transition: all 0.4s;
+    /* 过渡动画 */
+}
+
+.cube .out_front{
+	transform: rotateY(0deg) translateZ(50px);
+    background-color: skyblue;
+}
+.cube .out_back{
+	transform: rotateY(180deg) translateZ(50px);
+    background-color: yellow;
+}
+.cube .out_left{
+	transform: rotateY(90deg) translateZ(50px);
+    background-color: aquamarine;
+}
+.cube .out_right{
+	transform: rotateY(-90deg) translateZ(50px);
+    background-color: pink;
+}
+.cube .out_top{
+	transform: rotateX(90deg) translateZ(50px);
+    background-color: #ffe3a7;
+}
+.cube .out_bottom{
+	transform: rotateX(-90deg) translateZ(50px);
+    background-color: #70f3ff;
+}
+
+.cube #small{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: 25px;
+}
+
+.cube .in_front{
+	transform: rotateY(0deg) translateZ(25px);
+    background-color: #f47983;
+}
+.cube .in_back{
+	transform: rotateY(180deg) translateZ(25px) ;
+    background-color: #a4e3c6;
+}
+.cube .in_left{
+	transform: rotateY(90deg) translateZ(25px);
+    background-color: #758a99;
+}
+.cube .in_right{
+	transform: rotateY(-90deg) translateZ(25px);
+    background-color: #cca4e3;
+}
+.cube .in_top{
+	transform: rotateX(90deg) translateZ(25px);
+    background-color: #7fecad;
+}
+.cube .in_bottom{
+	transform: rotateX(-90deg) translateZ(25px);
+    background-color: #fff2df;
+}
+
+/*鼠标移入后样式*/
+.cube:hover .out_front{
+	transform: rotateY(0deg) translateZ(100px);
+}
+.cube:hover .out_back{
+	transform: rotateY(180deg) translateZ(100px);
+}
+.cube:hover .out_left{
+	transform: rotateY(90deg) translateZ(100px);
+}
+.cube:hover .out_right{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.cube:hover .out_top{
+	transform: rotateX(90deg) translateZ(100px);
+}
+.cube:hover .out_bottom{
+	transform: rotateX(-90deg) translateZ(100px);
+}
