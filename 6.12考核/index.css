@@ -10,7 +10,7 @@
     perspective: 1000px;
     /* 调整视距 */
     top: calc(40% - 50px);
-    left: calc(50% - 50px);
+    left: calc(45% - 50px);
     /* 垂直水平居中 */
 }
 /*立方体容器样式*/
